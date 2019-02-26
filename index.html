@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Present Wars Worldwide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="vendor/normalize.css" />
+    <link rel="stylesheet" media="screen" href="vendor/flickity.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <script>
+        var slidesData = [{
+                id: '0',
+                title: 'Boko Haram insurgency',
+                description: 'Description 1',
+                image: "<p>deaths</p> <img src='images/boko-haram.jpg' alt='Photo placeholder'> <p>51 567+</p>",
+                coords: {lat: 9.052978, lng: 7.507485}
+            },
+            {
+                id: '1',
+                title: 'Ethnic violence in South Sudan',
+                description: 'Description2',
+                image: "<p>deaths</p> <img src='images/graves.jpg' alt='Photo placeholder'> <p>400 000+</p>",
+                coords: {lat: 7.7660983, lng: 20.6491937}
+            },
+            {
+                id: '2',
+                title: 'Syrian Civil War',
+                description: 'Description2',
+                image: "<p>deaths</p> <img src='images/4.jpg' alt='Photo placeholder'> <p>560 000+</p>",
+                coords: {lat: 26.2900714, lng: 12.8374898}
+            },
+            {
+                id: '3',
+                title: 'Somali Civil War',
+                description: 'Description2',
+                image: "<p>deaths</p> <img src='images/mali.jpg' alt='Photo placeholder'> <p>500 000+</p>",
+                coords: {lat: 5.2310428, lng: 41.8080074}
+            },
+            {
+                id: '4',
+                title: 'Libyan Civil War',
+                description: 'Description2',
+                image: "<p>deaths</p> <img src='images/refuges.jpg' alt='Photo placeholder'> <p>42 253+</p>",
+                coords: {lat: 26.0774984, lng: 8.3088008}
+            }
+        ]
+    </script>
+    <script id="template-slide-list" type="x-tmpl-mustache">
+        <div class="carousel-cell" id="{{ id }}" >
+            <div class="container">
+                <h2>{{ title }}</h2>
+                <div class="static-banner static-banner2">{{{ description }}}</div>
+                {{{ image }}}
+            </div>
+        </div>
+    </script>
+
+    <div class="pageWrapper">
+
+        <div class="main-carousel" id="slidesContainer">
+
+            <!-- slides goes here -->
+
+        </div>
+        <div class="progress-bar"></div>
+
+        <div id="map"></div>
+        <button class="button--previous">Button Previous</button>
+        <button class="button button--previous-wrapped">Previous wrapped</button>
+    </div>
+
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5ly03IdDjKGyh6VUCnnzGfKwQ0t2xAyY&callback=initMap">
+    </script>
+
+
+</body>
+
+</html>
